@@ -67,41 +67,39 @@ void ejercicio2(){
 	cout<<"Ingrese un numero: ";
 	cin>>num;
 	int A1=1,A2=2;
+	int a[A1]={};
+	int b[A2]={};
 	for(int i=0;i<num;i++){
-		int a[A1]={};
-		int b[A2]={};
-		if(i==0){
-			a[0]=1;
-			b[0]=1;
-			b[1]=1;
-		}else{
-			for(int y=0;y<A1;y++){
-				a[0]=1;
-				a[A1-1]=1;
+		if(i%2==0){
+			if(i==1){
+				b[0]=1;	
+				b[1]=1;
+			}else{
 				
 			}
 			
+		}else{
 			
-		
-			b[0]=1;
-			
-			
-		
-			b[A2-1]=1;
-			
-			
-			
-			
-			
-					
+			if(i==0){
+			a[0]=1;	
+			}else{
+				
+			}
 		}
-		
-		cout<<"A1: "<<A1<<" A2: "<<A2<<endl;
+		for(int j=0;j<A1;j++){
+		cout<<a[j];	
+		}	
+		cout<<" "<<endl;
+		for(int j=0;j<A2;j++){
+		cout<<b[j];	
+		}
 		A1=A1+2;
 		A2=A2+2;
-		
 				
-	}
+		}
+		
+		
+	cout<<endl;
 }
 
 void ejercicio3(){
