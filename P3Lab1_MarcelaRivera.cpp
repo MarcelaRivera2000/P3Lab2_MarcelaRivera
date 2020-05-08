@@ -66,41 +66,66 @@ void ejercicio2(){
 	int num;
 	cout<<"Ingrese un numero: ";
 	cin>>num;
-	int A1=1,A2=2;
-	int a[A1]={};
-	int b[A2]={};
+	int A1=num,A2=num;
+	int a[A1];
+	int b[A2];
+	a[0]=1;
+	b[0]=1;
+	b[1]=1;
+	for(int i=2;i<num;i++){
+		a[i]=0;
+		b[i]=0;
+	}
+	
+	//imprime
 	for(int i=0;i<num;i++){
-		if(i%2==0){
-			if(i==1){
-				b[0]=1;	
-				b[1]=1;
-			}else{
-				
-			}
-			
-		}else{
-			
-			if(i==0){
-			a[0]=1;	
-			}else{
-				
-			}
+		if(a[i]==1){
+			cout<<" ["<<a[i]<<"] ";	
 		}
-		for(int j=0;j<A1;j++){
-		cout<<a[j];	
+	}
+	cout<<endl;
+	for(int i=0;i<num;i++){
+		if(b[i]==1){
+			cout<<" ["<<b[i]<<"] ";	
 		}	
-		cout<<" "<<endl;
-		for(int j=0;j<A2;j++){
-		cout<<b[j];	
+	}
+	//termina 
+	
+	for(int i=2;i<num;i++){
+		a[0]=1;
+		a[i]=1;
+		for(int j=0;j<i-1;j++){
+			a[j+1]=b[j+1]+b[j];
 		}
-		A1=A1+2;
-		A2=A2+2;
-				
+		cout<<endl;
+		for(int i=0;i<num;i++){
+		if(a[i]!=0){
+			cout<<" ["<<a[i]<<"] ";	
 		}
+	}
+		b[0]=1;
+		b[i+1]=1;
+		for(int j=0;j<i-1;j++){
+			b[j+1]=a[j+1]+a[j];
+			b[j+1]=a[i-3]+a[i-2];
+		}
+		cout<<endl;
+		cout<<endl;
+		for(int i=0;i<num;i++){
+			if(b[i]!=0){
+			cout<<" ["<<b[i]<<"] ";	
+		}	
+	}
+	cout<<endl;
+	//termina 		
 		
 		
+		
+		}
+	
 	cout<<endl;
 }
+
 
 void ejercicio3(){
 	srand(time(NULL));
