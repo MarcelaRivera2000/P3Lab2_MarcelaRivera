@@ -48,16 +48,18 @@ void ejercicio1(){
 	}
 	int cont=0;
 	for(int i=1;i<=num;i++){
-	
-	if(num%i==1){
-		cont++;
-	}	
-		
+		int aux,num1=num,num2=i;
+		do{
+		aux=num2;
+		num2=num1%num2;
+		num1=aux;
+		}while(num2!=0);
+		if(aux==1){
+			cont++;
+		}
 	}
+	
 	cout<<"Resultado: "<<cont<<endl;
-	
-	
-	
 }
 
 void ejercicio2(){
